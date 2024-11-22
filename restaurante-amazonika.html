@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazonika - Restaurante</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu archivo CSS aquí -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Menú */
+        .restaurant-menu {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-menu h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h3 {
+            text-align: center;
+            color: #ff914d;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .menu-items {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            gap: 15px; /* Espaciado entre elementos */
+        }
+
+        .menu-item {
+            flex: 0 0 auto;
+            width: 250px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-item h4 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .menu-item span {
+            color: #ff914d;
+            font-size: 16px;
+        }
+
+        .restaurant-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .restaurant-menu {
+                padding: 15px;
+            }
+
+            .menu-category h3 {
+                font-size: 20px;
+            }
+
+            .menu-items {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu-item {
+                width: 200px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .user-area {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="imagenes/logo.jpg" alt="Logo" class="logo">
+        <div class="user-area">
+            <span>Usuario</span>
+            <img src="imagenes/usuario.png" alt="Avatar de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+        </div>
+    </header>
+
+
+
+    <!-- Menú -->
+    <section class="restaurant-menu">
+        <h2>Menú</h2>
+
+        <!-- Categoría 1: Platos Principales -->
+        <div class="menu-category">
+            <h3>Platos Principales</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/arrozconpollo.jpg" alt="Arroz con Pollo Amazónico">
+                    <h4>Arroz con Pollo Amazónico</h4>
+                    <span>$15.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/trucha.webp" alt="Trucha a la Parrilla">
+                    <h4>Trucha a la Parrilla</h4>
+                    <span>$18.50</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/patarashca.jpg" alt="Patarashca">
+                    <h4>Patarashca</h4>
+                    <span>$16.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 2: Entradas -->
+        <div class="menu-category">
+            <h3>Entradas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/cevicheamazonico.jpg" alt="Ceviche Amazónico">
+                    <h4>Ceviche Amazónico</h4>
+                    <span>$14.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/yucafrita.jpg" alt="Yuca Frita con Salsa">
+                    <h4>Yuca Frita con Salsa</h4>
+                    <span>$7.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/palmito.jpg" alt="Ensalada de Palmito">
+                    <h4>Ensalada de Palmito</h4>
+                    <span>$9.50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 3: Bebidas -->
+        <div class="menu-category">
+            <h3>Bebidas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/chichamoada.jpg" alt="Chicha Morada">
+                    <h4>Chicha Morada</h4>
+                    <span>$3.50</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/jugos.jpg" alt="Jugos Naturales">
+                    <h4>Jugos Naturales</h4>
+                    <span>$4.00</span>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer -->
+    <div class="restaurant-footer">
+        <p>&copy; 2024 Amazonika | Todos los derechos reservados</p>
+    </div>
+</body>
+</html>

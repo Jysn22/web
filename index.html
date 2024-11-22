@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurantes que venden Hamburguesas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="imagenes/logo.jpg" alt="Logo" class="logo">
+        <div class="user-area">
+            <span>Usuario</span>
+            <img src="imagenes/usuario.png" alt="Avatar de usuario">
+        </div>
+    </header>
+
+    <!-- Buscador -->
+    <section class="search-section">
+        <input type="text" placeholder="¿Qué vas a pedir hoy?">
+        <button><i class="fas fa-search"></i></button>
+    </section>
+
+<!-- Categorías -->
+<h1 class="category-title">Categorías</h1>
+
+<section class="categories-section">
+    <div class="categories-gallery">
+        <!-- Hamburguesas -->
+        <a href="restaurantes-hamburguesas.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/burguer.webp" alt="Hamburguesas" class="category-icon">
+                <p>Hamburguesas</p>
+            </div>
+        </a>
+
+        <!-- Pizza -->
+        <a href="restaurantes-pizza.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/pizza.webp" alt="Pizza" class="category-icon">
+                <p>Pizza</p>
+            </div>
+        </a>
+
+        <!-- Sushi -->
+        <a href="restaurantes-sushi.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/sushi.png" alt="Sushi" class="category-icon">
+                <p>Sushi</p>
+            </div>
+        </a>
+
+        <!-- Tacos -->
+        <a href="restaurantes-tacos.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/tacos.png" alt="Tacos" class="category-icon">
+                <p>Tacos</p>
+            </div>
+        </a>
+
+        <!-- Pasta -->
+        <a href="restaurantes-pasta.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/pasta.png" alt="Pasta" class="category-icon">
+                <p>Pasta</p>
+            </div>
+        </a>
+
+        <!-- Ensaladas -->
+        <a href="restaurantes-ensaladas.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/ensalda.png" alt="Ensaladas" class="category-icon">
+                <p>Ensaladas</p>
+            </div>
+        </a>
+
+        <!-- Pollo -->
+        <a href="restaurantes-pollo.html" class="category-link">
+            <div class="category">
+                <img src="imagenes/polloalabrasa.png" alt="Pollo" class="category-icon">
+                <p>Pollo</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+<section class="promotions-section">
+    <div class="promotions-header">
+        <h2>¡Ofertas Exclusivas!</h2>
+    </div>
+    <div class="promotions-gallery">
+        <div class="promotion">
+            <div class="promotion-image">
+                <img src="imagenes/combo 1.jpg" alt="Promo 1">
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="promo-description">
+                <h4>¡Combo Doble!</h4>
+                <p><strong>Restaurante:</strong> <span class="restaurant-name">Bembos</span></p>
+                <p class="delivery-time">
+                    30 mins <i class="fas fa-motorcycle"></i>
+                </p>
+                <button class="btn-promo">Ver más</button>
+            </div>
+        </div>
+        <div class="promotion">
+            <div class="promotion-image">
+                <img src="imagenes/promo2.jpg" alt="Promo 2">
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="promo-description">
+                <h4>40% de descuento</h4>
+                <p><strong>Restaurante:</strong> <span class="restaurant-name">McDonald's</span></p>
+                <p class="delivery-time">
+                    25 mins <i class="fas fa-motorcycle"></i>
+                </p>
+                <button class="btn-promo">Ver más</button>
+            </div>
+        </div>
+        <div class="promotion">
+            <div class="promotion-image">
+                <img src="imagenes/promo3.webp" alt="Promo 3">
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="promo-description">
+                <h4>Gratis una bebida</h4>
+                <p><strong>Restaurante:</strong> <span class="restaurant-name">Burger King</span></p>
+                <p class="delivery-time">
+                    20 mins <i class="fas fa-motorcycle"></i>
+                </p>
+                <button class="btn-promo">Ver más</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="restaurant-gallery">
+    <!-- Amazonika -->
+    <a href="restaurante-amazonika.html" class="restaurant-card">
+        <img src="imagenes/amazonika.jpeg" alt="Amazonika" class="restaurant-logo">
+        <h3>Amazonika</h3>
+    </a>
+    <!-- Chilenito (Pollería a la Brasa) -->
+    <a href="restaurante-chilenito.html" class="restaurant-card">
+        <img src="imagenes/chilenito.jpeg" alt="Chilenito" class="restaurant-logo">
+        <h3>Chilenito</h3>
+    </a>
+    <!-- Chinito -->
+    <a href="restaurante-chinito.html" class="restaurant-card">
+        <img src="imagenes/chinito.jpeg" alt="Chinito" class="restaurant-logo">
+        <h3>Chinito</h3>
+    </a>
+    <!-- Kimsa -->
+    <a href="restaurante-kimsa.html" class="restaurant-card">
+        <img src="imagenes/kimsa.jpeg" alt="Kimsa" class="restaurant-logo">
+        <h3>Kimsa</h3>
+    </a>
+    <!-- Portobello -->
+    <a href="restaurante-portobello.html" class="restaurant-card">
+        <img src="imagenes/portobelo.jpeg" alt="Portobello" class="restaurant-logo">
+        <h3>Portobello</h3>
+    </a>
+    <!-- Rossi -->
+    <a href="restaurante-rossi.html" class="restaurant-card">
+        <img src="imagenes/rossi.jpeg" alt="Rossi" class="restaurant-logo">
+        <h3>Rossi</h3>
+    </a>
+    <!-- Sanguchito -->
+    <a href="restaurante-sanguchito.html" class="restaurant-card">
+        <img src="imagenes/sanguchito.jpeg" alt="Sanguchito" class="restaurant-logo">
+        <h3>Sanguchito</h3>
+    </a>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="imagenes/logo.jpg" alt="Sos Food Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Sos Food</h3>
+                <p>Tu restaurante favorito, cerca de ti.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sos Food. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

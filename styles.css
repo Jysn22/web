@@ -1,0 +1,767 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden; /* Evita el scroll horizontal en todo el body */
+}
+
+/* Contenedor principal con márgenes laterales */
+.main-container {
+    width: 100%;
+    margin: 0 20px; /* Márgenes a los lados */
+    padding: 0 20px; /* Espacio para que el contenido no se pegue a los bordes */
+    background-color: #ffffff; /* Fondo blanco para simular el "espacio" */
+    box-sizing: border-box; /* Asegura que los márgenes se cuenten dentro del ancho total */
+}
+
+/* Personalización del Scroll */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px; /* Altura de la barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Fondo de la pista de desplazamiento */
+    border-radius: 10px; /* Bordes redondeados de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff914d; /* Color del "dedo" del scroll */
+    border-radius: 10px; /* Bordes redondeados del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff7043; /* Color del thumb al pasar el mouse */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff914d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    width: 170px;
+    height: auto;
+}
+
+.user-area {
+    display: flex;
+    align-items: center;
+}
+
+.user-area span {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.user-area img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Buscador */
+.search-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.search-section input {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    background-color: #ffffff;
+}
+
+.search-section button {
+    padding: 12px 20px;
+    background-color: #ff914d;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #ff7043;
+}
+
+/* Categorías */
+.categories-gallery {
+    display: flex;
+    gap: 20px; /* Espacio uniforme entre categorías */
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* No permitir que los elementos se muevan a una nueva línea */
+    overflow-x: auto; /* Habilitar el scroll horizontal */
+    padding: 20px 30px;
+}
+
+.category {
+    text-align: center;
+    width: 140px; /* Fija el ancho de las cajas */
+    height: 160px; /* Fija la altura de las cajas */
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fondo transparente para eliminar el cuadro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: none; /* Eliminar la sombra del cuadro */
+    transition: transform 0.2s ease-in-out;
+}
+
+.category:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin: 0; /* Eliminar márgenes */
+}
+
+/* Eliminar subrayado de los enlaces */
+.category-link {
+    text-decoration: none; /* Elimina la línea azul debajo de los enlaces */
+}
+
+/* Estilos cuando se hace hover o se selecciona el enlace */
+.category-link:focus, .category-link:hover {
+    outline: none; /* Elimina el borde del enfoque (que suele ser azul en algunos navegadores) */
+    transform: scale(1.05); /* Mantener el efecto de hover */
+}
+
+/* Estilo del scroll de categorías */
+.categories-gallery::-webkit-scrollbar {
+    height: 8px; /* Ajuste el tamaño del scrollbar */
+}
+
+.categories-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.categories-gallery::-webkit-scrollbar-thumb {
+    background: #ff914d;
+    border-radius: 10px;
+}
+
+.categories-gallery::-webkit-scrollbar-thumb:hover {
+    background: #ff7043;
+}
+
+
+/* Promociones */
+.promotions-section {
+    padding: 40px 20px;
+    background-color: #ff9f62; /* Fondo naranja suave */
+    text-align: center;
+    position: relative;
+    margin-top: 20px; /* Separación de otras secciones */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden; /* Para evitar que los elementos salgan del contenedor */
+}
+
+/* Contenedor del título que se queda fijo */
+.promotions-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 159, 98, 0.85); /* Fondo con opacidad */
+    padding: 10px 0;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Estilo del título */
+.promotions-header h2 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Galería de promociones */
+.promotions-gallery {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    overflow-x: auto; /* Habilitar el scroll horizontal */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+.promotion {
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco con opacidad */
+    position: relative;
+    margin-right: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promotion:hover {
+    transform: translateY(-8px); /* Efecto sutil de elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.promotion-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.promotion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.7); /* Oscurecer imagen */
+}
+
+.rating {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #f1c40f;
+    z-index: 2;
+}
+
+.rating i {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+/* Descripción de la promoción */
+.promo-description {
+    padding: 20px;
+    text-align: left;
+}
+
+.promo-description h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.promo-description p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.promo-description .restaurant-name {
+    font-weight: bold;
+    color: #ff7043;
+}
+
+.delivery-time {
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.delivery-time i {
+    font-size: 16px;
+    color: #ff7043;
+    margin-left: 5px;
+}
+
+/* Botón "Ver más" */
+.btn-promo {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-promo:hover {
+    background-color: #ff5722;
+}
+
+/* Estilo del scroll horizontal */
+.promotions-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.promotions-gallery::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.promotions-gallery::-webkit-scrollbar-thumb {
+    background: #ff7043;
+    border-radius: 10px;
+}
+
+.promotions-gallery::-webkit-scrollbar-thumb:hover {
+    background: #ff5722;
+}
+
+
+/* Galería de restaurantes */
+.restaurant-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite el scroll horizontal */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    flex-wrap: nowrap; /* Evita que los restaurantes se pasen a la siguiente línea */
+    margin-top: 40px; /* Espacio superior */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    -webkit-overflow-scrolling: touch; /* Asegura el scroll suave en dispositivos móviles */
+    scroll-snap-type: x mandatory; /* Forza el scroll a ajustarse a un solo elemento */
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Cada tarjeta de restaurante */
+.restaurant-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Ajusta el tamaño fijo de cada tarjeta */
+    height: 350px; /* Ajusta la altura de las tarjetas */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    background-color: #fff; /* Fondo blanco para cada tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    scroll-snap-align: start; /* Asegura que el elemento se alinee al hacer scroll */
+}
+
+/* Efecto de hover en la tarjeta */
+.restaurant-card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta al pasar el ratón */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más grande para darle énfasis */
+}
+
+/* Imagen del logo del restaurante */
+.restaurant-logo {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: 100%; /* Hace que la imagen ocupe toda la altura de la tarjeta */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de hover en la imagen */
+.restaurant-logo:hover {
+    transform: scale(1.05); /* Aumenta la imagen al pasar el ratón */
+}
+
+/* Estilo para el nombre del restaurante */
+.restaurant-card h3 {
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold;
+    color: #333; /* Color oscuro para el nombre */
+    text-transform: uppercase;
+    margin: 10px 0; /* Espaciado entre la imagen y el texto */
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de hover en el nombre */
+.restaurant-card:hover h3 {
+    color: #ff914d; /* Cambia el color del nombre al pasar el ratón */
+    text-shadow: 1px 1px 10px rgba(255, 145, 77, 0.8); /* Sombra suave para resaltar el texto */
+}
+
+/* Estilo para el scroll horizontal de restaurantes */
+.restaurant-gallery::-webkit-scrollbar {
+    height: 8px; /* Altura del scroll */
+}
+
+.restaurant-gallery::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.restaurant-gallery::-webkit-scrollbar-thumb {
+    background: #ff914d;
+    border-radius: 5px;
+}
+
+.restaurant-gallery::-webkit-scrollbar-thumb:hover {
+    background: #ff7043;
+}
+
+
+/* Footer */
+footer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-info {
+    font-size: 16px;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    /* General */
+    body {
+        overflow-x: hidden; /* Evitar scroll horizontal en el body */
+    }
+
+    /* Galería de categorías */
+    .categories-gallery {
+        display: flex;
+        flex-direction: row; /* Alinear elementos en fila */
+        gap: 15px; /* Ajustar el espacio entre las categorías */
+        padding: 0 15px; /* Reducir padding en pantallas pequeñas */
+        overflow-x: auto; /* Scroll horizontal */
+        margin: 0 10px; /* Márgenes laterales para evitar que se pegue al borde */
+        -webkit-overflow-scrolling: touch; /* Asegurar scroll suave en iOS */
+    }
+
+    .category {
+        width: 100px; /* Ancho de cada categoría */
+        height: 140px; /* Altura de cada categoría */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0; /* Espaciado interno */
+        background-color: transparent; /* Fondo transparente */
+        margin-right: 10px; /* Espacio entre las categorías */
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+        border: none; /* Quitar borde */
+    }
+
+    .category-icon {
+        width: 80px; /* Tamaño de las imágenes en móviles */
+        height: 80px;
+        margin-bottom: 8px; /* Espacio entre la imagen y el texto */
+    }
+
+    .category p {
+        font-size: 16px; /* Tamaño de texto más grande en móviles */
+        margin: 0; /* Eliminar márgenes para evitar el desbordamiento */
+        color: #666; /* Color del texto */
+        text-align: center; /* Aseguramos que el texto esté centrado */
+    }
+
+    /* Promociones */
+    .promotions-gallery {
+        display: flex;
+        flex-direction: row; /* Alinear en fila */
+        gap: 10px; /* Espacio entre promociones */
+        margin: 0 10px; /* Márgenes laterales para no pegarse al borde */
+        overflow-x: auto; /* Scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Asegurar scroll suave en iOS */
+    }
+
+    .promotion {
+        width: 100%; /* Ancho completo para promociones en pantallas pequeñas */
+        min-width: 300px; /* Ancho mínimo para promociones */
+        margin-right: 20px;
+    }
+
+    .promotion img {
+        height: 200px; /* Ajuste de la altura de las imágenes de las promociones */
+    }
+
+    /* Restaurantes */
+    .restaurant-gallery {
+        display: flex;
+        flex-wrap: nowrap; /* Evita que las tarjetas se pasen a la siguiente línea */
+        overflow-x: auto; /* Scroll horizontal */
+        gap: 10px; /* Espacio entre las tarjetas */
+        padding: 10px 0; /* Padding adecuado para el contenedor */
+        justify-content: flex-start; /* Alinear los elementos al inicio */
+        scroll-snap-type: x mandatory; /* Forzar el ajuste de los elementos en el scroll */
+        scroll-behavior: smooth; /* Desplazamiento suave */
+        margin: 0 10px; /* Márgenes laterales para no pegarse al borde */
+        -webkit-overflow-scrolling: touch; /* Asegurar scroll suave en iOS */
+    }
+
+    /* Tarjetas de restaurantes */
+    .restaurant-card {
+        width: 95vw; /* Ajustar el tamaño de las tarjetas en pantallas pequeñas */
+        height: 310px; /* Altura de las tarjetas */
+        flex-shrink: 0; /* Evita que las tarjetas se reduzcan demasiado */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .restaurant-logo {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+        height: 100%; /* Asegura que la imagen ocupe toda la altura de la tarjeta */
+        object-fit: cover; /* Cubre el espacio sin deformarse */
+    }
+
+    /* Ajustes en el hover de las tarjetas */
+    .restaurant-card:hover {
+        transform: translateY(-10px); /* Eleva la tarjeta */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mayor en hover */
+    }
+
+    /* Ajustes en el nombre del restaurante */
+    .restaurant-card h3 {
+        font-size: 16px; /* Ajuste en el tamaño de fuente */
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Sección de búsqueda */
+    .search-section input {
+        width: 80%; /* Mejorar el tamaño del input */
+    }
+
+    .search-section button {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 769px) {
+    /* Galería de categorías */
+    .categories-gallery {
+        display: flex;
+        justify-content: center; /* Centrado en pantallas grandes */
+        overflow-x: auto; /* Habilitar scroll horizontal */
+        gap: 20px; /* Espaciado entre las categorías */
+        margin: 0 20px; /* Márgenes laterales para evitar que se pegue al borde */
+        -webkit-overflow-scrolling: touch; /* Asegurar scroll suave en iOS */
+    }
+
+    .category {
+        width: 150px; /* Aumento del tamaño de las categorías */
+        height: 150px; /* Aumento de la altura para las categorías */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 0; /* Espaciado interno */
+        background-color: transparent; /* Fondo transparente */
+        margin-right: 10px; /* Separación entre las categorías */
+        box-sizing: border-box; /* Ajustar el tamaño sin afectar el padding */
+        border: none; /* Quitar borde */
+    }
+
+    .category-icon {
+        width: 90px; /* Aumento del tamaño de las imágenes */
+        height: 90px;
+        margin-bottom: 8px; /* Ajustar el espacio entre imagen y texto */
+    }
+
+    .category p {
+        font-size: 16px; /* Mejorar el tamaño del texto */
+        color: #666; /* Color del texto */
+        text-align: center; /* Aseguramos que el texto esté centrado */
+    }
+
+    /* Galería de promociones y restaurantes */
+    .promotions-gallery, .restaurant-gallery {
+        display: flex;
+        justify-content: center; /* Centrado de las promociones y restaurantes */
+        margin: 0 20px; /* Márgenes laterales para no pegarse al borde */
+        -webkit-overflow-scrolling: touch; /* Asegurar scroll suave en iOS */
+    }
+
+    .promotion img {
+        height: 200px; /* Ajuste de la imagen */
+    }
+
+    /* Ajustes para las tarjetas de restaurante */
+    .restaurant-card {
+        width: 500px; /* Hacer las tarjetas más grandes en pantallas grandes */
+    }
+
+    .restaurant-logo {
+        height: 100%; /* Aumento de la imagen en pantallas grandes */
+    }
+
+    /* Estilo del scroll de categorías */
+    .categories-gallery::-webkit-scrollbar {
+        height: 8px; /* Tamaño del scroll */
+    }
+
+    .categories-gallery::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .categories-gallery::-webkit-scrollbar-thumb {
+        background: #ff914d;
+        border-radius: 10px;
+    }
+
+    .categories-gallery::-webkit-scrollbar-thumb:hover {
+        background: #ff7043;
+    }
+}
+
+/* Header de la categoría */
+.category-header {
+    background-color: #ff914d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff7043;
+}
+
+.category-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.category-description {
+    font-size: 18px;
+    color: #f1f1f1;
+    margin-top: 10px;
+}
+
+/* Sección de Restaurantes */
+.restaurants-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.restaurants-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px); /* Efecto de hover */
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff914d;
+}
+
+.restaurant-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.restaurant-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.restaurant-rating {
+    font-size: 18px;
+    color: #f1c40f;
+    margin: 5px 0;
+}
+
+.restaurant-location {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.restaurant-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff914d;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.restaurant-link:hover {
+    background-color: #ff7043;
+}

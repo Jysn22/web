@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portobello - Restaurante de Pastas y Chicken Grill</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu archivo CSS aquí -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Menú */
+        .restaurant-menu {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-menu h2 {
+            text-align: center;
+            color: #ff6b00; /* Naranja característico */
+            margin-bottom: 20px;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h3 {
+            text-align: center;
+            color: #ff6b00;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .menu-items {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            gap: 15px; /* Espaciado entre elementos */
+        }
+
+        .menu-item {
+            flex: 0 0 auto;
+            width: 250px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-item h4 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .menu-item span {
+            color: #ff6b00;
+            font-size: 16px;
+        }
+
+        .restaurant-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .restaurant-menu {
+                padding: 15px;
+            }
+
+            .menu-category h3 {
+                font-size: 20px;
+            }
+
+            .menu-items {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu-item {
+                width: 200px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .user-area {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="imagenes/logo.jpg" alt="Logo Portobello" class="logo">
+        <div class="user-area">
+            <span>Usuario</span>
+            <img src="imagenes/usuario.png" alt="Avatar de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+        </div>
+    </header>
+
+    <!-- Menú -->
+    <section class="restaurant-menu">
+        <h2>Menú - Portobello</h2>
+
+        <!-- Categoría 1: Pastas -->
+        <div class="menu-category">
+            <h3>Pastas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/boloñesa.webp" alt="Pasta Bolognesa">
+                    <h4>Pasta Bolognesa</h4>
+                    <span>$12.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/alfredo.jpg" alt="Pasta Alfredo">
+                    <h4>Pasta Alfredo</h4>
+                    <span>$13.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/carbonara.jpg" alt="Pasta Carbonara">
+                    <h4>Pasta Carbonara</h4>
+                    <span>$14.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 2: Chicken Grill -->
+        <div class="menu-category">
+            <h3>Chicken Grill</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/pollo_a_la_parrilla.jpg" alt="Pollo a la Parrilla">
+                    <h4>Pollo a la Parrilla</h4>
+                    <span>$9.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/pollogril.jpg" alt="Pollo Grill con Salsa">
+                    <h4>Pollo Grill con Salsa</h4>
+                    <span>$10.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/polloverduras.jpg" alt="Pollo Grill con Verduras">
+                    <h4>Pollo Grill con Verduras</h4>
+                    <span>$11.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 3: Acompañantes -->
+        <div class="menu-category">
+            <h3>Acompañantes</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/panajo.jpg" alt="Pan de Ajo">
+                    <h4>Pan de Ajo</h4>
+                    <span>$3.50</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/focaccia.jpg" alt="Focaccia">
+                    <h4>Focaccia</h4>
+                    <span>$4.50</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/arroz.webp" alt="Arroz Blanco">
+                    <h4>Arroz Blanco</h4>
+                    <span>$2.50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 4: Bebidas -->
+        <div class="menu-category">
+            <h3>Bebidas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/jugonaranja.jpg" alt="Jugo Natural de Naranja">
+                    <h4>Jugo Natural de Naranja</h4>
+                    <span>$3.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/cerveza.jpg" alt="Cerveza Artesanal">
+                    <h4>Cerveza Artesanal</h4>
+                    <span>$5.00</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div class="restaurant-footer">
+        <p>&copy; 2024 Portobello | Todos los derechos reservados</p>
+    </div>
+</body>
+</html>

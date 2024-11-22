@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilenito - Restaurante de Pollos a la Brasa</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula tu archivo CSS aquí -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Menú */
+        .restaurant-menu {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-menu h2 {
+            text-align: center;
+            color: #ff6b00; /* Naranja característico */
+            margin-bottom: 20px;
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        .menu-category h3 {
+            text-align: center;
+            color: #ff6b00;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .menu-items {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            gap: 15px; /* Espaciado entre elementos */
+        }
+
+        .menu-item {
+            flex: 0 0 auto;
+            width: 250px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .menu-item h4 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .menu-item span {
+            color: #ff6b00;
+            font-size: 16px;
+        }
+
+        .restaurant-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .restaurant-menu {
+                padding: 15px;
+            }
+
+            .menu-category h3 {
+                font-size: 20px;
+            }
+
+            .menu-items {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu-item {
+                width: 200px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .user-area {
+                margin-top: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="imagenes/logo.jpg" alt="Logo Chilenito" class="logo">
+        <div class="user-area">
+            <span>Usuario</span>
+            <img src="imagenes/usuario.png" alt="Avatar de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+        </div>
+    </header>
+
+    <!-- Menú -->
+    <section class="restaurant-menu">
+        <h2>Menú - Chilenito</h2>
+
+        <!-- Categoría 1: Pollos a la Brasa -->
+        <div class="menu-category">
+            <h3>Pollos a la Brasa</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/polloalabrasa1.jpg" alt="Pollo a la Brasa">
+                    <h4>Pollo a la Brasa Completo</h4>
+                    <span>$25.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/mediopollo.webp" alt="Medio Pollo a la Brasa">
+                    <h4>Medio Pollo a la Brasa</h4>
+                    <span>$14.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/pechopollo.jpg" alt="Pechuga de Pollo a la Brasa">
+                    <h4>Pechuga de Pollo a la Brasa</h4>
+                    <span>$18.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 2: Acompañantes -->
+        <div class="menu-category">
+            <h3>Acompañantes</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/papas.jpg" alt="Papas Fritas">
+                    <h4>Papas Fritas</h4>
+                    <span>$4.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/ensalda1.png" alt="Ensalada">
+                    <h4>Ensalada Fresca</h4>
+                    <span>$3.50</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/arroz.webp" alt="Arroz Blanco">
+                    <h4>Arroz Blanco</h4>
+                    <span>$2.50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría 3: Bebidas -->
+        <div class="menu-category">
+            <h3>Bebidas</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="imagenes/cerveza.jpg" alt="Cerveza">
+                    <h4>Cerveza Artesanal</h4>
+                    <span>$5.00</span>
+                </div>
+                <div class="menu-item">
+                    <img src="imagenes/limonada.jpg" alt="Limonada Natural">
+                    <h4>Limonada Natural</h4>
+                    <span>$3.00</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div class="restaurant-footer">
+        <p>&copy; 2024 Chilenito | Todos los derechos reservados</p>
+    </div>
+</body>
+</html>
